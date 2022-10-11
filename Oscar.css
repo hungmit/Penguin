@@ -1,0 +1,100 @@
+#button{
+    color:white;
+    width: 150px;
+    height: 50px;
+    padding: 5px;
+    background-color:blue;
+
+    position: absolute;
+    left: 700px;
+    top: 620px;
+    font-family: cursive;
+    font-size: 18px;
+    border-radius: 75px;
+    
+}
+body {
+    background-image: url('http://static2.yan.vn/YanNews/2167221/201806/l3-ef3f861f.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.button {
+    background-color:purple;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+
+  .button3 {border-radius: 8px;}
+
+  a
+  {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      font-size: 18px;
+      transform: translate(-50%,-50%);
+      color:white;
+      width: 200px;
+      height: 75px;
+      background: purple;
+      border-radius: 75px;
+      line-height: 75px;
+      text-align: center;
+      transition: 0.5s;
+      text-transform: unset;
+     }
+     a.active{
+         background: transparent;
+
+     }
+    a:before
+     {
+         content: '';
+         position: absolute;
+         top:0;
+         left:0;
+         background-color:red;
+         width: 50%;
+         height: 100%;
+         transition: 0.5s;
+         transform: translate(-150px) rotate(-325deg);
+         opacity: 0;
+        }
+    a.active::before{
+        transform: translate(30px) rotate(34deg);
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        z-index: -1;
+        opacity: 1;
+
+    } 
+    a:after
+     {
+         content: '';
+         position: absolute;
+         top:0;
+         left:0;
+         background-color:red;
+         width: 50%;
+         height: 100%;
+         transition: 0.5s;
+         transform: translate(250px) rotate(325deg);
+        opacity: 0;
+
+        }
+    a.active:after{
+        transform: translate(70px) rotate(-34deg);
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
+        z-index: -1;
+        opacity: 1;
+
+
+    } 
